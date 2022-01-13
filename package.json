@@ -8,7 +8,12 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "cdk:bootstrap": "cdk bootstrap -y -o templates",
+    "cdk:synth": "cdk synth -y -o templates",
+    "cdk:diff": "cdk diff -y -o templates",
+    "cdk:deploy": "cdk deploy -y -o templates --all",
+    "cdk:destroy": "cdk destroy -y -o templates --all"
   },
   "devDependencies": {
     "aws-cdk": "2.1.0",
@@ -21,6 +26,7 @@
   },
   "dependencies": {
     "aws-cdk-lib": "2.1.0",
-    "constructs": "^10.0.0"
+    "constructs": "^10.0.0",
+    "dotenv": "^11.0.0"
   }
 }
