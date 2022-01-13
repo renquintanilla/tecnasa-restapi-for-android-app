@@ -7,6 +7,84 @@
         "file": "tree.json"
       }
     },
+    "devTecAWSTecnasaRestapiForAndroidAppStackdevTecAWSGatewayStack23820089.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "devTecAWSTecnasaRestapiForAndroidAppStackdevTecAWSGatewayStack23820089.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "devTecAWSTecnasaRestapiForAndroidAppStackdevTecAWSGatewayStack23820089": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "devTecAWSTecnasaRestapiForAndroidAppStackdevTecAWSGatewayStack23820089.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b032606050ee1fa9a40e2bdf6ad765ff20eb4ec4e3ce371e22d1cfb00f154e7c.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "devTecAWSTecnasaRestapiForAndroidAppStackdevTecAWSGatewayStack23820089.assets"
+        ]
+      },
+      "dependencies": [
+        "devTecAWSTecnasaRestapiForAndroidAppStackdevTecAWSGatewayStack23820089.assets"
+      ],
+      "metadata": {
+        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "devTecAWSRestApi54532613"
+          }
+        ],
+        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "devTecAWSRestApiCloudWatchRole631E4BA2"
+          }
+        ],
+        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "devTecAWSRestApiAccount85BFE112"
+          }
+        ],
+        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "devTecAWSRestApiANY33B1B0F8"
+          }
+        ],
+        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack"
+    },
     "devTecAWSTecnasaRestapiForAndroidAppStack.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
