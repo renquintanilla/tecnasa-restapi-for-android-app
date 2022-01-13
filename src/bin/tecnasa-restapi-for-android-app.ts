@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 require('dotenv').config();
 
-import * as cdk from 'aws-cdk-lib';
+import * as cdk from '@aws-cdk/core';
 import { TecnasaRestapiForAndroidAppStack } from '../lib/tecnasa-restapi-for-android-app-stack';
 
 const app = new cdk.App();
