@@ -21,9 +21,11 @@ export class TecnasaRestapiStack extends Stack {
       prefix: props.prefix
     });
 
-
     const authServerlessStack = new AuthServerlessStack(this, `${ props.prefix }AuthServerlessSt`, {
-      prefix: props.prefix
+      prefix: props.prefix,
+      USER_TABLE_NAME: dynamoDBStack.userTable.tableName,
+      GROUP_TABLE_NAME: dynamoDBStack.groupTable.tableName,
+      dynamoDBStack
     });
 
   }

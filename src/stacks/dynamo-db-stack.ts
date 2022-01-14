@@ -9,8 +9,8 @@ interface DynamoDBStackProps extends StackProps {
 
 export class DynamoDBStack extends Stack {
 
-    public userTable: Table;
-    public groupTable: Table;
+    public readonly userTable: Table;
+    public readonly groupTable: Table;
 
     constructor(scope: Construct, id: string, props: DynamoDBStackProps) {
         super(scope, id, props);

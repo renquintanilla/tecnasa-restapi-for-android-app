@@ -8,7 +8,7 @@ const app = new cdk.App();
 
 const stackEnv = process.env.STACK_ENV ?? 'dev';
 
-const prefix = `${ stackEnv }`
+const prefix = `${ stackEnv }`;
 
 new TecnasaRestapiStack(app, `${prefix}Tecnasa`, {
     prefix
