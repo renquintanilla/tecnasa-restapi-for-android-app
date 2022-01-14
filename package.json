@@ -2,7 +2,7 @@
   "name": "tecnasa-restapi-for-android-app",
   "version": "0.1.0",
   "bin": {
-    "tecnasa-restapi-for-android-app": "bin/tecnasa-restapi-for-android-app.js"
+    "tecnasa-restapi": "bin/tecnasa-restapi.js"
   },
   "scripts": {
     "build": "tsc",
