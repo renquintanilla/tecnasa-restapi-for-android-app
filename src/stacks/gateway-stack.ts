@@ -1,5 +1,6 @@
-import { Stack, StackProps, Construct } from "@aws-cdk/core";
-import {RestApi} from "@aws-cdk/aws-apigateway";
+import { Construct } from 'constructs';
+import {RestApi} from "aws-cdk-lib/aws-apigateway";
+import { Stack, StackProps } from 'aws-cdk-lib';
 
 
 interface GatewayProps extends StackProps {

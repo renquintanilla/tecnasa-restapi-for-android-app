@@ -1,5 +1,6 @@
-import { Stack, Construct, StackProps, RemovalPolicy } from "@aws-cdk/core";
-import { AttributeType, Table } from "@aws-cdk/aws-dynamodb";
+import { RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib';
+import { Construct } from 'constructs';
+import { AttributeType, Table } from "aws-cdk-lib/aws-dynamodb";
 
 
 interface DynamoDBStackProps extends StackProps {

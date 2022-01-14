@@ -1,5 +1,5 @@
-import * as lambda from '@aws-cdk/aws-lambda';
-import { Construct } from "@aws-cdk/core";
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import { Construct } from 'constructs';
 
 interface AuthLambdasProps {
     USER_TABLE_NAME: string;

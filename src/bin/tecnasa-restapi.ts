@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 require('dotenv').config();
 
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
 import { TecnasaRestapiStack } from '../lib/tecnasa-restapi-stack';
 
 const app = new cdk.App();

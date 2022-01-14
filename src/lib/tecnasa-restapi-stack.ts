@@ -1,7 +1,8 @@
-import { Stack, Construct, StackProps } from "@aws-cdk/core";
 import { GateWayStack } from '../stacks/gateway-stack';
 import { AuthServerlessStack } from "../stacks/auth-serverless-stack";
 import { DynamoDBStack } from "../stacks/dynamo-db-stack";
+import { Stack, StackProps } from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 
 interface RootStack extends StackProps {
   prefix: string;
