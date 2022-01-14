@@ -1,6 +1,6 @@
 
 import { Stack,Construct, StackProps} from "@aws-cdk/core";
-import { AuthLambdas } from "src/handlers/auth";
+import { AuthLambdas } from "./../handlers/auth";
 
 interface AuthServerlessProps extends StackProps {
     prefix: string;

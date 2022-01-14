@@ -14,7 +14,7 @@ export class AuthLambdas {
 
         this.login = new lambda.Function(scope, 'Login', {
             runtime: lambda.Runtime.NODEJS_14_X,
-            code: lambda.Code.fromAsset(''),
+            code: lambda.Code.fromAsset('build/lambdas'),
             handler: 'auth.login',
             environment: {
                 USER_TABLE_NAME: props.USER_TABLE_NAME
@@ -23,7 +23,7 @@ export class AuthLambdas {
 
         this.register = new lambda.Function(scope, 'Register', {
             runtime: lambda.Runtime.NODEJS_14_X,
-            code: lambda.Code.fromAsset(''),
+            code: lambda.Code.fromAsset('build/lambdas'),
             handler: 'auth.register',
             environment: {
                 USER_TABLE_NAME: props.USER_TABLE_NAME

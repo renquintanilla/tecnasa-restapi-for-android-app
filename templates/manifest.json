@@ -1,5 +1,5 @@
 {
-  "version": "15.0.0",
+  "version": "16.0.0",
   "artifacts": {
     "Tree": {
       "type": "cdk:tree",
@@ -7,137 +7,711 @@
         "file": "tree.json"
       }
     },
-    "devTecAWSTecnasaRestapiForAndroidAppStackdevTecAWSGatewayStack23820089.assets": {
-      "type": "cdk:asset-manifest",
-      "properties": {
-        "file": "devTecAWSTecnasaRestapiForAndroidAppStackdevTecAWSGatewayStack23820089.assets.json",
-        "requiresBootstrapStackVersion": 6,
-        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
-      }
-    },
-    "devTecAWSTecnasaRestapiForAndroidAppStackdevTecAWSGatewayStack23820089": {
+    "devTecnasadevDynamodbStEFB45C1D": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
-        "templateFile": "devTecAWSTecnasaRestapiForAndroidAppStackdevTecAWSGatewayStack23820089.template.json",
-        "validateOnSynth": false,
-        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
-        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b032606050ee1fa9a40e2bdf6ad765ff20eb4ec4e3ce371e22d1cfb00f154e7c.json",
-        "requiresBootstrapStackVersion": 6,
-        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
-        "additionalDependencies": [
-          "devTecAWSTecnasaRestapiForAndroidAppStackdevTecAWSGatewayStack23820089.assets"
-        ]
+        "templateFile": "devTecnasadevDynamodbStEFB45C1D.template.json",
+        "validateOnSynth": false
       },
-      "dependencies": [
-        "devTecAWSTecnasaRestapiForAndroidAppStackdevTecAWSGatewayStack23820089.assets"
-      ],
       "metadata": {
-        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Resource": [
+        "/devTecnasa/devDynamodbSt/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "devTecAWSRestApi54532613"
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
           }
         ],
-        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/CloudWatchRole/Resource": [
+        "/devTecnasa/devDynamodbSt/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "devTecAWSRestApiCloudWatchRole631E4BA2"
-          }
-        ],
-        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Account": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "devTecAWSRestApiAccount85BFE112"
-          }
-        ],
-        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Default/ANY/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "devTecAWSRestApiANY33B1B0F8"
-          }
-        ],
-        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/CDKMetadata/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CDKMetadata"
-          }
-        ],
-        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/CDKMetadata/Condition": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CDKMetadataAvailable"
-          }
-        ],
-        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/BootstrapVersion": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "BootstrapVersion"
-          }
-        ],
-        "/devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/CheckBootstrapVersion": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CheckBootstrapVersion"
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:31:27)",
+              "/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
           }
         ]
       },
-      "displayName": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack"
+      "displayName": "devTecnasa/devDynamodbSt"
     },
-    "devTecAWSTecnasaRestapiForAndroidAppStack.assets": {
-      "type": "cdk:asset-manifest",
-      "properties": {
-        "file": "devTecAWSTecnasaRestapiForAndroidAppStack.assets.json",
-        "requiresBootstrapStackVersion": 6,
-        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
-      }
-    },
-    "devTecAWSTecnasaRestapiForAndroidAppStack": {
+    "devTecnasadevGatewaySt58386EAA": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
-        "templateFile": "devTecAWSTecnasaRestapiForAndroidAppStack.template.json",
-        "validateOnSynth": false,
-        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
-        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4f77d30441dffc755e3911391bb6f06ec2cb4e96145ac2ed507c693ad19c96e0.json",
-        "requiresBootstrapStackVersion": 6,
-        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
-        "additionalDependencies": [
-          "devTecAWSTecnasaRestapiForAndroidAppStack.assets"
-        ]
+        "templateFile": "devTecnasadevGatewaySt58386EAA.template.json",
+        "validateOnSynth": false
       },
-      "dependencies": [
-        "devTecAWSTecnasaRestapiForAndroidAppStack.assets"
-      ],
       "metadata": {
-        "/devTecAWSTecnasaRestapiForAndroidAppStack/CDKMetadata/Default": [
+        "/devTecnasa/devGatewaySt/devRestApi/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CDKMetadata"
+            "data": "devRestApiF7A10B4F",
+            "trace": [
+              "new RestApi (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:479:22)",
+              "new GateWayStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/gateway-stack.ts:13:28)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:19:26)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
           }
         ],
-        "/devTecAWSTecnasaRestapiForAndroidAppStack/CDKMetadata/Condition": [
+        "/devTecnasa/devGatewaySt/devRestApi/CloudWatchRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CDKMetadataAvailable"
+            "data": "devRestApiCloudWatchRole5CC9325C",
+            "trace": [
+              "new Role (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
+              "RestApi._configureCloudWatchRole (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:302:18)",
+              "new RestApi (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:497:12)",
+              "new GateWayStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/gateway-stack.ts:13:28)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:19:26)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
           }
         ],
-        "/devTecAWSTecnasaRestapiForAndroidAppStack/BootstrapVersion": [
+        "/devTecnasa/devGatewaySt/devRestApi/Account": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "BootstrapVersion"
+            "data": "devRestApiAccountECB08692",
+            "trace": [
+              "RestApi._configureCloudWatchRole (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:307:30)",
+              "new RestApi (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:497:12)",
+              "new GateWayStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/gateway-stack.ts:13:28)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:19:26)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
           }
         ],
-        "/devTecAWSTecnasaRestapiForAndroidAppStack/CheckBootstrapVersion": [
+        "/devTecnasa/devGatewaySt/devRestApi/Default/ANY/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CheckBootstrapVersion"
+            "data": "devRestApiANY4D4EED23",
+            "trace": [
+              "new Method (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:116:22)",
+              "RootResource.addMethod (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "new GateWayStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/gateway-stack.ts:17:25)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:19:26)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/devGatewaySt/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ],
+        "/devTecnasa/devGatewaySt/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:31:27)",
+              "/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
           }
         ]
       },
-      "displayName": "devTecAWSTecnasaRestapiForAndroidAppStack"
+      "displayName": "devTecnasa/devGatewaySt"
+    },
+    "devTecnasadevAuthServerlessStCD0AB25D": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "devTecnasadevAuthServerlessStCD0AB25D.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/devTecnasa/devAuthServerlessSt/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ],
+        "/devTecnasa/devAuthServerlessSt/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:31:27)",
+              "/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "devTecnasa/devAuthServerlessSt"
+    },
+    "devTecnasa": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "devTecnasa.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/devTecnasa": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.e333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0",
+              "id": "e333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0",
+              "packaging": "zip",
+              "sourceHash": "e333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0",
+              "s3BucketParameter": "AssetParameterse333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0S3Bucket8B16E28A",
+              "s3KeyParameter": "AssetParameterse333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0S3VersionKey11EEDCA1",
+              "artifactHashParameter": "AssetParameterse333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0ArtifactHash56837EA1"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:163:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "TecnasaRestapiStack.addFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:53",
+              "withoutDeprecationWarnings (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:195:12)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:14)",
+              "new Asset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:350:29)",
+              "new AuthLambdas (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/handlers/auth.ts:15:22)",
+              "new AuthServerlessStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/auth-serverless-stack.ts:16:28)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:24:33)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/dev-users": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "devusersF8C2F700"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
+              "new Table (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:735:38)",
+              "new DynamoDBStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/dynamo-db-stack.ts:19:26)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:15:27)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/dev-users/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "devusersF8C2F700",
+            "trace": [
+              "new Table (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:706:18)",
+              "new DynamoDBStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/dynamo-db-stack.ts:19:26)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:15:27)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/dev-groups": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "devgroups25B8723C"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
+              "new Table (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:735:38)",
+              "new DynamoDBStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/dynamo-db-stack.ts:30:27)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:15:27)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/dev-groups/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "devgroups25B8723C",
+            "trace": [
+              "new Table (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:706:18)",
+              "new DynamoDBStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/dynamo-db-stack.ts:30:27)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:15:27)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/Login/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LoginServiceRole873D1043",
+            "trace": [
+              "new Role (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
+              "new Function (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:330:31)",
+              "new AuthLambdas (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/handlers/auth.ts:15:22)",
+              "new AuthServerlessStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/auth-serverless-stack.ts:16:28)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:24:33)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/Login/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LoginDDE9992A",
+            "trace": [
+              "new Function (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:400:35)",
+              "new AuthLambdas (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/handlers/auth.ts:15:22)",
+              "new AuthServerlessStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/auth-serverless-stack.ts:16:28)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:24:33)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/AssetParameters/e333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0S3Bucket8B16E28A",
+            "trace": [
+              "new FileAssetParameters (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:146:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "TecnasaRestapiStack.addFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:53",
+              "withoutDeprecationWarnings (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:195:12)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:14)",
+              "new Asset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:350:29)",
+              "new AuthLambdas (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/handlers/auth.ts:15:22)",
+              "new AuthServerlessStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/auth-serverless-stack.ts:16:28)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:24:33)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/AssetParameters/e333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0S3VersionKey11EEDCA1",
+            "trace": [
+              "new FileAssetParameters (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:146:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "TecnasaRestapiStack.addFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:53",
+              "withoutDeprecationWarnings (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:195:12)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:14)",
+              "new Asset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:350:29)",
+              "new AuthLambdas (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/handlers/auth.ts:15:22)",
+              "new AuthServerlessStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/auth-serverless-stack.ts:16:28)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:24:33)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/AssetParameters/e333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0ArtifactHash56837EA1",
+            "trace": [
+              "new FileAssetParameters (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:146:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "TecnasaRestapiStack.addFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:53",
+              "withoutDeprecationWarnings (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:195:12)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:14)",
+              "new Asset (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:350:29)",
+              "new AuthLambdas (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/handlers/auth.ts:15:22)",
+              "new AuthServerlessStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/auth-serverless-stack.ts:16:28)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:24:33)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/Register/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RegisterServiceRoleCA12FB7C",
+            "trace": [
+              "new Role (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
+              "new Function (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:330:31)",
+              "new AuthLambdas (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/handlers/auth.ts:24:25)",
+              "new AuthServerlessStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/auth-serverless-stack.ts:16:28)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:24:33)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/Register/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Register34FE4340",
+            "trace": [
+              "new Function (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/aws-lambda/lib/function.ts:400:35)",
+              "new AuthLambdas (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/handlers/auth.ts:24:25)",
+              "new AuthServerlessStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/stacks/auth-serverless-stack.ts:16:28)",
+              "new TecnasaRestapiStack (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/lib/tecnasa-restapi-stack.ts:24:33)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/src/bin/tecnasa-restapi.ts:13:1)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/Users/jdnarvaezf/.nvm/versions/node/v12.22.7/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/devTecnasa/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ],
+        "/devTecnasa/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:31:27)",
+              "/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/Users/jdnarvaezf/Documents/android-course/tecnasa-restapi-for-android-app/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "devTecnasa"
     }
   }
 }

@@ -8,43 +8,175 @@
         "id": "Tree",
         "path": "Tree",
         "constructInfo": {
-          "fqn": "constructs.Construct",
-          "version": "10.0.31"
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.139.0"
         }
       },
-      "devTecAWSTecnasaRestapiForAndroidAppStack": {
-        "id": "devTecAWSTecnasaRestapiForAndroidAppStack",
-        "path": "devTecAWSTecnasaRestapiForAndroidAppStack",
+      "devTecnasa": {
+        "id": "devTecnasa",
+        "path": "devTecnasa",
         "children": {
-          "devTecAWSGatewayStack": {
-            "id": "devTecAWSGatewayStack",
-            "path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack",
+          "devDynamodbSt": {
+            "id": "devDynamodbSt",
+            "path": "devTecnasa/devDynamodbSt",
             "children": {
-              "devTecAWSRestApi": {
-                "id": "devTecAWSRestApi",
-                "path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi",
+              "CDKMetadata": {
+                "id": "CDKMetadata",
+                "path": "devTecnasa/devDynamodbSt/CDKMetadata",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "devTecnasa/devDynamodbSt/CDKMetadata/Default",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnResource",
+                      "version": "1.139.0"
+                    }
+                  },
+                  "Condition": {
+                    "id": "Condition",
+                    "path": "devTecnasa/devDynamodbSt/CDKMetadata/Condition",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnCondition",
+                      "version": "1.139.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.139.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Stack",
+              "version": "1.139.0"
+            }
+          },
+          "dev-users": {
+            "id": "dev-users",
+            "path": "devTecnasa/dev-users",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "devTecnasa/dev-users/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "userId",
+                        "keyType": "HASH"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "userId",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "provisionedThroughput": {
+                      "readCapacityUnits": 5,
+                      "writeCapacityUnits": 5
+                    },
+                    "tableName": "dev-users"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-dynamodb.CfnTable",
+                  "version": "1.139.0"
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "devTecnasa/dev-users/ScalingRole",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.139.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-dynamodb.Table",
+              "version": "1.139.0"
+            }
+          },
+          "dev-groups": {
+            "id": "dev-groups",
+            "path": "devTecnasa/dev-groups",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "devTecnasa/dev-groups/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "groupId",
+                        "keyType": "HASH"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "groupId",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "provisionedThroughput": {
+                      "readCapacityUnits": 5,
+                      "writeCapacityUnits": 5
+                    },
+                    "tableName": "dev-groups"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-dynamodb.CfnTable",
+                  "version": "1.139.0"
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "devTecnasa/dev-groups/ScalingRole",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.139.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-dynamodb.Table",
+              "version": "1.139.0"
+            }
+          },
+          "devGatewaySt": {
+            "id": "devGatewaySt",
+            "path": "devTecnasa/devGatewaySt",
+            "children": {
+              "devRestApi": {
+                "id": "devRestApi",
+                "path": "devTecnasa/devGatewaySt/devRestApi",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Resource",
+                    "path": "devTecnasa/devGatewaySt/devRestApi/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::ApiGateway::RestApi",
                       "aws:cdk:cloudformation:props": {
-                        "name": "devTecAWSRestApi"
+                        "name": "devRestApi"
                       }
                     },
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_apigateway.CfnRestApi",
-                      "version": "2.1.0"
+                      "fqn": "@aws-cdk/aws-apigateway.CfnRestApi",
+                      "version": "1.139.0"
                     }
                   },
                   "CloudWatchRole": {
                     "id": "CloudWatchRole",
-                    "path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/CloudWatchRole",
+                    "path": "devTecnasa/devGatewaySt/devRestApi/CloudWatchRole",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/CloudWatchRole/Resource",
+                        "path": "devTecnasa/devGatewaySt/devRestApi/CloudWatchRole/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                           "aws:cdk:cloudformation:props": {
@@ -77,58 +209,58 @@
                           }
                         },
                         "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                          "version": "2.1.0"
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.139.0"
                         }
                       }
                     },
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_iam.Role",
-                      "version": "2.1.0"
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.139.0"
                     }
                   },
                   "Account": {
                     "id": "Account",
-                    "path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Account",
+                    "path": "devTecnasa/devGatewaySt/devRestApi/Account",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::ApiGateway::Account",
                       "aws:cdk:cloudformation:props": {
                         "cloudWatchRoleArn": {
                           "Fn::GetAtt": [
-                            "devTecAWSRestApiCloudWatchRole631E4BA2",
+                            "devRestApiCloudWatchRole5CC9325C",
                             "Arn"
                           ]
                         }
                       }
                     },
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_apigateway.CfnAccount",
-                      "version": "2.1.0"
+                      "fqn": "@aws-cdk/aws-apigateway.CfnAccount",
+                      "version": "1.139.0"
                     }
                   },
                   "Default": {
                     "id": "Default",
-                    "path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Default",
+                    "path": "devTecnasa/devGatewaySt/devRestApi/Default",
                     "children": {
                       "ANY": {
                         "id": "ANY",
-                        "path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Default/ANY",
+                        "path": "devTecnasa/devGatewaySt/devRestApi/Default/ANY",
                         "children": {
                           "Resource": {
                             "id": "Resource",
-                            "path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Default/ANY/Resource",
+                            "path": "devTecnasa/devGatewaySt/devRestApi/Default/ANY/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
                               "aws:cdk:cloudformation:props": {
                                 "httpMethod": "ANY",
                                 "resourceId": {
                                   "Fn::GetAtt": [
-                                    "devTecAWSRestApi54532613",
+                                    "devRestApiF7A10B4F",
                                     "RootResourceId"
                                   ]
                                 },
                                 "restApiId": {
-                                  "Ref": "devTecAWSRestApi54532613"
+                                  "Ref": "devRestApiF7A10B4F"
                                 },
                                 "authorizationType": "NONE",
                                 "integration": {
@@ -137,96 +269,494 @@
                               }
                             },
                             "constructInfo": {
-                              "fqn": "aws-cdk-lib.aws_apigateway.CfnMethod",
-                              "version": "2.1.0"
+                              "fqn": "@aws-cdk/aws-apigateway.CfnMethod",
+                              "version": "1.139.0"
                             }
                           }
                         },
                         "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_apigateway.Method",
-                          "version": "2.1.0"
+                          "fqn": "@aws-cdk/aws-apigateway.Method",
+                          "version": "1.139.0"
                         }
                       }
                     },
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_apigateway.ResourceBase",
-                      "version": "2.1.0"
+                      "fqn": "@aws-cdk/aws-apigateway.ResourceBase",
+                      "version": "1.139.0"
                     }
                   }
                 },
                 "constructInfo": {
-                  "fqn": "aws-cdk-lib.aws_apigateway.RestApi",
-                  "version": "2.1.0"
+                  "fqn": "@aws-cdk/aws-apigateway.RestApi",
+                  "version": "1.139.0"
                 }
               },
               "CDKMetadata": {
                 "id": "CDKMetadata",
-                "path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/CDKMetadata",
+                "path": "devTecnasa/devGatewaySt/CDKMetadata",
                 "children": {
                   "Default": {
                     "id": "Default",
-                    "path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/CDKMetadata/Default",
+                    "path": "devTecnasa/devGatewaySt/CDKMetadata/Default",
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.CfnResource",
-                      "version": "2.1.0"
+                      "fqn": "@aws-cdk/core.CfnResource",
+                      "version": "1.139.0"
                     }
                   },
                   "Condition": {
                     "id": "Condition",
-                    "path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/CDKMetadata/Condition",
+                    "path": "devTecnasa/devGatewaySt/CDKMetadata/Condition",
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.CfnCondition",
-                      "version": "2.1.0"
+                      "fqn": "@aws-cdk/core.CfnCondition",
+                      "version": "1.139.0"
                     }
                   }
                 },
                 "constructInfo": {
-                  "fqn": "constructs.Construct",
-                  "version": "10.0.31"
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.139.0"
                 }
               }
             },
             "constructInfo": {
-              "fqn": "aws-cdk-lib.Stack",
-              "version": "2.1.0"
+              "fqn": "@aws-cdk/core.Stack",
+              "version": "1.139.0"
+            }
+          },
+          "devAuthServerlessSt": {
+            "id": "devAuthServerlessSt",
+            "path": "devTecnasa/devAuthServerlessSt",
+            "children": {
+              "CDKMetadata": {
+                "id": "CDKMetadata",
+                "path": "devTecnasa/devAuthServerlessSt/CDKMetadata",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "devTecnasa/devAuthServerlessSt/CDKMetadata/Default",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnResource",
+                      "version": "1.139.0"
+                    }
+                  },
+                  "Condition": {
+                    "id": "Condition",
+                    "path": "devTecnasa/devAuthServerlessSt/CDKMetadata/Condition",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnCondition",
+                      "version": "1.139.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.139.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Stack",
+              "version": "1.139.0"
+            }
+          },
+          "Login": {
+            "id": "Login",
+            "path": "devTecnasa/Login",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "devTecnasa/Login/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "devTecnasa/Login/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.139.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.139.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "devTecnasa/Login/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "devTecnasa/Login/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.139.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "devTecnasa/Login/Code/AssetBucket",
+                    "children": {
+                      "Notifications": {
+                        "id": "Notifications",
+                        "path": "devTecnasa/Login/Code/AssetBucket/Notifications",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.139.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.139.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.139.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "devTecnasa/Login/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameterse333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0S3Bucket8B16E28A"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameterse333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0S3VersionKey11EEDCA1"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameterse333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0S3VersionKey11EEDCA1"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "LoginServiceRole873D1043",
+                        "Arn"
+                      ]
+                    },
+                    "environment": {
+                      "variables": {
+                        "USER_TABLE_NAME": ""
+                      }
+                    },
+                    "handler": "auth.login",
+                    "runtime": "nodejs14.x"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.139.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.139.0"
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "devTecnasa/AssetParameters",
+            "children": {
+              "e333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0": {
+                "id": "e333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0",
+                "path": "devTecnasa/AssetParameters/e333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "devTecnasa/AssetParameters/e333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.139.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "devTecnasa/AssetParameters/e333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.139.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "devTecnasa/AssetParameters/e333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.139.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.139.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.139.0"
+            }
+          },
+          "Register": {
+            "id": "Register",
+            "path": "devTecnasa/Register",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "devTecnasa/Register/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "devTecnasa/Register/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.139.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.139.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "devTecnasa/Register/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "devTecnasa/Register/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.139.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "devTecnasa/Register/Code/AssetBucket",
+                    "children": {
+                      "Notifications": {
+                        "id": "Notifications",
+                        "path": "devTecnasa/Register/Code/AssetBucket/Notifications",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.139.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.139.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.139.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "devTecnasa/Register/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameterse333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0S3Bucket8B16E28A"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameterse333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0S3VersionKey11EEDCA1"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameterse333d773eb925ea269b385886df38533ed230b5d76f0773d8d79e0ae7361f0a0S3VersionKey11EEDCA1"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "RegisterServiceRoleCA12FB7C",
+                        "Arn"
+                      ]
+                    },
+                    "environment": {
+                      "variables": {
+                        "USER_TABLE_NAME": ""
+                      }
+                    },
+                    "handler": "auth.register",
+                    "runtime": "nodejs14.x"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.139.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.139.0"
             }
           },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "devTecAWSTecnasaRestapiForAndroidAppStack/CDKMetadata",
+            "path": "devTecnasa/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "devTecAWSTecnasaRestapiForAndroidAppStack/CDKMetadata/Default",
+                "path": "devTecnasa/CDKMetadata/Default",
                 "constructInfo": {
-                  "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.1.0"
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.139.0"
                 }
               },
               "Condition": {
                 "id": "Condition",
-                "path": "devTecAWSTecnasaRestapiForAndroidAppStack/CDKMetadata/Condition",
+                "path": "devTecnasa/CDKMetadata/Condition",
                 "constructInfo": {
-                  "fqn": "aws-cdk-lib.CfnCondition",
-                  "version": "2.1.0"
+                  "fqn": "@aws-cdk/core.CfnCondition",
+                  "version": "1.139.0"
                 }
               }
             },
             "constructInfo": {
-              "fqn": "constructs.Construct",
-              "version": "10.0.31"
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.139.0"
             }
           }
         },
         "constructInfo": {
-          "fqn": "aws-cdk-lib.Stack",
-          "version": "2.1.0"
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.139.0"
         }
       }
     },
     "constructInfo": {
-      "fqn": "aws-cdk-lib.App",
-      "version": "2.1.0"
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.139.0"
     }
   }
 }

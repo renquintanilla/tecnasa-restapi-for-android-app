@@ -1,15 +1,15 @@
 {
   "Resources": {
-    "devTecAWSRestApi54532613": {
+    "devRestApiF7A10B4F": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "devTecAWSRestApi"
+        "Name": "devRestApi"
       },
       "Metadata": {
-        "aws:cdk:path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Resource"
+        "aws:cdk:path": "devTecnasa/devGatewaySt/devRestApi/Resource"
       }
     },
-    "devTecAWSRestApiCloudWatchRole631E4BA2": {
+    "devRestApiCloudWatchRole5CC9325C": {
       "Type": "AWS::IAM::Role",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -40,38 +40,38 @@
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/CloudWatchRole/Resource"
+        "aws:cdk:path": "devTecnasa/devGatewaySt/devRestApi/CloudWatchRole/Resource"
       }
     },
-    "devTecAWSRestApiAccount85BFE112": {
+    "devRestApiAccountECB08692": {
       "Type": "AWS::ApiGateway::Account",
       "Properties": {
         "CloudWatchRoleArn": {
           "Fn::GetAtt": [
-            "devTecAWSRestApiCloudWatchRole631E4BA2",
+            "devRestApiCloudWatchRole5CC9325C",
             "Arn"
           ]
         }
       },
       "DependsOn": [
-        "devTecAWSRestApi54532613"
+        "devRestApiF7A10B4F"
       ],
       "Metadata": {
-        "aws:cdk:path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Account"
+        "aws:cdk:path": "devTecnasa/devGatewaySt/devRestApi/Account"
       }
     },
-    "devTecAWSRestApiANY33B1B0F8": {
+    "devRestApiANY4D4EED23": {
       "Type": "AWS::ApiGateway::Method",
       "Properties": {
         "HttpMethod": "ANY",
         "ResourceId": {
           "Fn::GetAtt": [
-            "devTecAWSRestApi54532613",
+            "devRestApiF7A10B4F",
             "RootResourceId"
           ]
         },
         "RestApiId": {
-          "Ref": "devTecAWSRestApi54532613"
+          "Ref": "devRestApiF7A10B4F"
         },
         "AuthorizationType": "NONE",
         "Integration": {
@@ -79,16 +79,16 @@
         }
       },
       "Metadata": {
-        "aws:cdk:path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/devTecAWSRestApi/Default/ANY/Resource"
+        "aws:cdk:path": "devTecnasa/devGatewaySt/devRestApi/Default/ANY/Resource"
       }
     },
     "CDKMetadata": {
       "Type": "AWS::CDK::Metadata",
       "Properties": {
-        "Analytics": "v2:deflate64:H4sIAAAAAAAA/02OzQ6CMBCEn8V7WYWLZ+TsBR+ArO2qy0+X0CIxTd/dAh48zZfZzOwUkMPpgIvLtOmynu8Qbh51p5LVBBz5iZ4W/ECoyflyZFU97B+WWstsvUqWzJOmCzpSV/IvMet5p6gYh9QgPW3xpDH+irbUypVYw57FRmXFELTu+M7PUKR5rWPOpvSGB4J61y+gCxWAuQAAAA=="
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/zWNQQ6CMBBFz+K+DIIL405k7QZP0LSjFqRD2kFimt7dVmT1X/Lnv6mgOpxgvzvLxRdKD2VQ5BDCjaUaREvWs5sVi/ZuO/Q0O4WZU6ENG7JR5GGQk3lIxkV+IKQ7bibzn2zYKEWzZbFZLtKjuCI/Sed6pSiMHJOBXr8vOWOMwpJG6H35rmqoazjuem9M4ZLOjAjdml91dKyRygAAAA=="
       },
       "Metadata": {
-        "aws:cdk:path": "devTecAWSTecnasaRestapiForAndroidAppStack/devTecAWSGatewayStack/CDKMetadata/Default"
+        "aws:cdk:path": "devTecnasa/devGatewaySt/CDKMetadata/Default"
       },
       "Condition": "CDKMetadataAvailable"
     }
@@ -283,40 +283,6 @@
               ]
             }
           ]
-        }
-      ]
-    }
-  },
-  "Parameters": {
-    "BootstrapVersion": {
-      "Type": "AWS::SSM::Parameter::Value<String>",
-      "Default": "/cdk-bootstrap/hnb659fds/version",
-      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
-    }
-  },
-  "Rules": {
-    "CheckBootstrapVersion": {
-      "Assertions": [
-        {
-          "Assert": {
-            "Fn::Not": [
-              {
-                "Fn::Contains": [
-                  [
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                  ],
-                  {
-                    "Ref": "BootstrapVersion"
-                  }
-                ]
-              }
-            ]
-          },
-          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
         }
       ]
     }
