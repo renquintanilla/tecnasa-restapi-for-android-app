@@ -1,6 +1,6 @@
-
-import { NestedStack,Construct, NestedStackProps} from "@aws-cdk/core";
-import {Method, RestApi, LambdaIntegration} from "@aws-cdk/aws-apigateway";
+import { NestedStack, NestedStackProps } from "aws-cdk-lib";
+import {Method, RestApi, LambdaIntegration} from "aws-cdk-lib/aws-apigateway";
+import { Construct } from "constructs";
 import { AuthServerlessStack } from "./auth-serverless-stack";
 
 interface AuthGatewayProps extends NestedStackProps {
