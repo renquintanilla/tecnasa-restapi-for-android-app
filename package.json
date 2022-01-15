@@ -6,6 +6,8 @@
   },
   "scripts": {
     "build": "tsc",
+    "build:prepare": "npm install --prefix src/lambdas",
+    "build:prod": "tsc && cp src/lambdas/package.json build/lambdas/package.json && cd build/lambdas/ && npm install --only=production",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
