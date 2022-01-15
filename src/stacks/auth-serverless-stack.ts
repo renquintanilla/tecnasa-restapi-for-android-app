@@ -5,9 +5,11 @@ import { DynamoDBStack } from './dynamo-db-stack';
 
 interface AuthServerlessProps extends StackProps {
     prefix: string;
+    JWT_KEY: string;
     USER_TABLE_NAME: string;
     GROUP_TABLE_NAME: string;
-    dynamoDBStack: DynamoDBStack
+    dynamoDBStack: DynamoDBStack;
+
 }
 
 export class AuthServerlessStack extends Stack {
@@ -19,7 +21,8 @@ export class AuthServerlessStack extends Stack {
 
         this.authLambdas = new AuthLambdas(scope, {
             USER_TABLE_NAME: props.USER_TABLE_NAME,
-            GROUP_TABLE_NAME: props.GROUP_TABLE_NAME
+            GROUP_TABLE_NAME: props.GROUP_TABLE_NAME,
+            JWT_KEY: props.JWT_KEY
         });
 
         props.dynamoDBStack.userTable.grantReadData(this.authLambdas.login);

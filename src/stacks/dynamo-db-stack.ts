@@ -26,6 +26,14 @@ export class DynamoDBStack extends Stack {
             removalPolicy: RemovalPolicy.DESTROY
         });
 
+        this.userTable.addGlobalSecondaryIndex({
+            indexName: 'userNameIndex',
+            partitionKey: {
+                name: 'userName',
+                type: AttributeType.STRING
+            }
+        });
+
         const groupTable = `${ props.prefix }-groups`;
 
         this.groupTable = new Table(scope, groupTable, {

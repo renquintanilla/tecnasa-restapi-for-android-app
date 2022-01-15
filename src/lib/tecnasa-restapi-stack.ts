@@ -6,6 +6,7 @@ import { Construct } from 'constructs';
 
 interface RootStack extends StackProps {
   prefix: string;
+  JWT_KEY: string;
 }
 
 export class TecnasaRestapiStack extends Stack {
@@ -23,6 +24,7 @@ export class TecnasaRestapiStack extends Stack {
 
     const authServerlessStack = new AuthServerlessStack(this, `${ props.prefix }AuthServerlessSt`, {
       prefix: props.prefix,
+      JWT_KEY: props.JWT_KEY,
       USER_TABLE_NAME: dynamoDBStack.userTable.tableName,
       GROUP_TABLE_NAME: dynamoDBStack.groupTable.tableName,
       dynamoDBStack
