@@ -8,14 +8,17 @@ interface GatewayProps extends StackProps {
 }
 
 export class GateWayStack extends Stack {
+
+    public readonly apiGateway: RestApi;
+
     constructor(scope: Construct, id: string, props: GatewayProps) {
         super(scope, id, props);
 
-        const apiGateway = new RestApi(this, `${ props.prefix }RestApi`, {
+        this.apiGateway = new RestApi(this, `${ props.prefix }RestApi`, {
             deploy: false
         });
 
-        apiGateway.root.addMethod('ANY');
+        this.apiGateway.root.addMethod('ANY');
 
     }
 }
